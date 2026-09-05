@@ -18,3 +18,37 @@ interface printTeacherFunction {
     (firstName: string, lastName: string): string;
     
 }
+
+// Define the StudentConstructor interface with the specified properties
+interface StudentConstructor {
+    firstName: string;
+    lastName: string;
+}
+
+// Define the StudentClassInterface with the specified properties and methods
+interface StudentClassInterface {
+    firstName: string;
+    lastName: string;
+    workOnHomework(): string;
+    displayName(): string
+}
+
+// Implement the StudentClass that adheres to the StudentClassInterface
+class StudentClass implements StudentClassInterface {
+    firstName: string;
+    lastName: string;
+
+    // Initialize the StudentClass with the provided firstName and lastName
+    constructor({firstName, lastName }: StudentConstructor) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    workOnHomework(): string {
+        return 'Currently working'
+    }
+
+    displayName(): string {
+        return this.firstName;
+    }
+}
