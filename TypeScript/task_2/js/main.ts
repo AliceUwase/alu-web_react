@@ -1,3 +1,4 @@
+// Define the DirectorInterface and TeacherInterface
 interface DirectorInterface {
     workFromHome(): string;
     getCoffeeBreak(): string;
@@ -10,6 +11,7 @@ interface TeacherInterface {
     workTeacherTasks(): string;
 }
 
+// Implement the Director class that adheres to the DirectorInterface
 class Director implements DirectorInterface {
     workFromHome(): string {
         return 'Working from home';
@@ -23,6 +25,7 @@ class Director implements DirectorInterface {
 
 }
 
+// Implement the Teacher class that adheres to the TeacherInterface
 class Teacher implements TeacherInterface {
     workFromHome(): string {
         return 'Cannot work from home';
@@ -35,6 +38,7 @@ class Teacher implements TeacherInterface {
     }
 }
 
+// Create an employee based on their salary
 function createEmpployee(salary: number | string): Director | Teacher {
     if (typeof salary === 'number' && salary < 500) {
         return new Teacher();
@@ -42,3 +46,17 @@ function createEmpployee(salary: number | string): Director | Teacher {
         return new Director();
     }
     }
+
+    // function to check if the employee is a Director
+function isDirector(employee: DirectorInterface | TeacherInterface): employee is DirectorInterface {
+    return employee instanceof Director;
+}
+
+// function to execute work based on the employee type
+function executeWork(employee: DirectorInterface | TeacherInterface): string {
+    if (isDirector(employee)) {
+        return employee.workDirectorTasks();
+    } else {
+        return employee.workTeacherTasks();
+    }
+}
