@@ -1,3 +1,4 @@
+// Define the Student interface with the specified properties
 interface Student {
     firstName: string;
     lastName: string;
@@ -5,6 +6,7 @@ interface Student {
     location: string;
 }
 
+// create two student objects
 const student1 = {
     firstName: 'Alice',
     lastName: 'Smith',
@@ -19,6 +21,7 @@ const student2 = {
     location: 'Iowa'
 };
 
+// create an array of students
 const studentsList: Student[] = [student1, student2];
 
 // create table header row
