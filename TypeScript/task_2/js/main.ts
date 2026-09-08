@@ -60,3 +60,15 @@ function executeWork(employee: DirectorInterface | TeacherInterface): string {
         return employee.workTeacherTasks();
     }
 }
+
+// string literal type for subjects
+type Subjects = "Math" | "History";
+
+// function that returns a string according to the subject
+function teachClass(todayClass: Subjects): string {
+    if (todayClass === 'Math') {
+        return 'Teaching Math'
+    } else {
+        return 'Teaching History'
+    }
+}
