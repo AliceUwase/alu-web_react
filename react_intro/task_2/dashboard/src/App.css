@@ -21,6 +21,8 @@
 .App-body  {
   height: 420px;
   padding: 35px 38px 0px;
+  text-align: left;
+
 }
 
 .App-body p {
