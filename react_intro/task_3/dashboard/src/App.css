@@ -1,0 +1,50 @@
+.App {
+  text-align: center;
+  margin: 20px;
+}
+
+.App-logo {
+  height: 140px;
+  width: 140px;
+  object-fit: contain;
+}
+
+
+.App-header {
+  background-color: #ffff;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid #e0354b;
+  height: 150px;
+}
+
+.App-body  {
+  height: 420px;
+  padding: 35px 38px 0px;
+  text-align: left;
+
+}
+
+.App-body p {
+  color: #000;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.App-header h1 {
+  color: #e0354b;
+  font-size: 32px;
+  margin-left: 32px;
+}
+
+.App-footer {
+  border-top: 3px solid #e0354b;
+  text-align: center;
+  font-style: italic;
+}
+
+.App-footer p {
+  margin-top: 15px;
+}
+
+
