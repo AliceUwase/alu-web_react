@@ -1,7 +1,10 @@
 .Notifications {
     position: relative;
-    border: 2px dashed var(--holb-red);
+    flex-wrap: wrap;
+    border: 2px dashed #e0354b;
     padding: 24px;
+    text-align: left;
+    
 }
 
 .Notifications ul {
