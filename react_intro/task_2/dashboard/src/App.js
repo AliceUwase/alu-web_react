@@ -1,12 +1,13 @@
 import logo from './h-logo.jpg';
 import { getFullYear, getFooterCopy } from "./utils.js";
 import React from 'react';
-import './Notifications.css';
+import { Notifications } from './Notifications';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <Notifications />
 
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
